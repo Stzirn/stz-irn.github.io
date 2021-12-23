@@ -22,11 +22,10 @@
 <br><br>
 <form class="form-signin ajax" method="post" action="ajax.php">
 <p class="ogl">Регистрация на IT HAB</p>
-<div class="main-error alert alert-error hide"></div>
-<input name="username" type="text" class="input-block-level" placeholder="Ваш E-mail" autofocus>
-<input name="names" type="text" class="input-block-level" placeholder="Ваше имя">
-<input name="password1" type="password" class="input-block-level" placeholder="Пароль">
-<input name="password2" type="password" class="input-block-level" placeholder="Повтор пароля">
+<div class="main-error alert alert-error hide"></div><input name="username" type="text" class="input-block-level" placeholder="Ваш E-mail" autofocus="" style="font-size: 24px;">
+<input name="names" type="text" class="input-block-level" placeholder="Ваше имя" autofocus="" style="font-size: 24px;">
+<input name="password1" type="password" class="input-block-level" placeholder="Пароль" autofocus="" style="font-size: 24px;">
+<input name="password2" type="password" class="input-block-level" placeholder="Повтор пароля" autofocus="" style="font-size: 24px;">
 <input type="hidden" name="act" value="register">
 <input type="hidden" name="ips" value="<?php echo $_SERVER['REMOTE_ADDR'];?>">
 <input type="hidden" name="vremya" value="<?php echo $vremya=date('d-m-Y');?>">
