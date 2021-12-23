@@ -1,21 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>IT HAB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+</head>
 
-  <body>
- 
-  <header>
-<div id="menu-button-id" class="menu-button">
-<img alt="" id="menu-button-id" src="https://stc.utdstc.com/img/header-btn-menu.svg" width="27.076" height="22">
-</div>
-<a href="https://ru.uptodown.com/android" class="logo">
-<img src="https://stc.utdstc.com/img/logo.svg" data-src="https://stc.utdstc.com/img/logo.svg" alt="Скачивай, открывай новое, делись с друзьями" width="157" height="25">
-</a>
-<img class=" lazyloaded" alt="android" data-src="https://stc.utdstc.com/img/menu-android.svg" src="https://stc.utdstc.com/img/menu-android.svg" width="20" height="20">
-<div id="search-button" class="search">
-<img alt="" src="https://stc.utdstc.com/img/header-btn-search.svg" width="24.365" height="23.201">
-</div>
-</header>
-  
-  </body>
-</html>
+<body>
+    
+<h1>Объединяем интересы 💬</h1>
+
+<div class="my_left"><div class="my_left-2">
+
+<!-- Для авторизованных -->
+<?php if (Auth\User::isAuthorized()): ?>
+<?php header('Refresh: 0; url=http://my-domen.ru');?>
+
+<!-- Для НЕ авторизованных -->
+<?php else: ?>
+<br><br>
+<form class="form-signin ajax" method="post" action="ajax.php">
+<p class="ogl">Регистрация на IT HAB</p>
+<div class="main-error alert alert-error hide"></div>
+<input name="username" type="text" class="input-block-level" placeholder="Ваш E-mail" autofocus>
+<input name="names" type="text" class="input-block-level" placeholder="Ваше имя">
+<input name="password1" type="password" class="input-block-level" placeholder="Пароль">
+<input name="password2" type="password" class="input-block-level" placeholder="Повтор пароля">
+<input type="hidden" name="act" value="register">
+<input type="hidden" name="ips" value="<?php echo $_SERVER['REMOTE_ADDR'];?>">
+<input type="hidden" name="vremya" value="<?php echo $vremya=date('d-m-Y');?>">
+<input id="regsubmit" type="submit" value="Регистрация">
+</form>
+<p class="ogl"><a href="index.html">Войти</a></p>
+
+<!-- Конец условия -->
+<?php endif; ?>
+
+
+</div></div>
+
+<script src="jquery-2.0.3.min.js"></script><script src="ajax-form.js"></script>
+</body>
+</htm
