@@ -1,44 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>IT HAB</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-</head>
 
-<body>
-    
-<h1 style="font-size: 43px;color: red;">Объединяем интересы 💬</h1>
+<html dir="ltr" lang="ru">
+ <head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-<div class="my_left"><div class="my_left-2">
-
-<!-- Для авторизованных -->
-<?php if (Auth\User::isAuthorized()): ?>
-<?php header('Refresh: 0; url=http://my-domen.ru');?>
-
-<!-- Для НЕ авторизованных -->
-<?php else: ?>
-<br><br>
-<form class="form-signin ajax" method="post" action="ajax.php">
-<p class="ogl">Регистрация на IT HAB</p>
-<div class="main-error alert alert-error hide"></div><input name="username" type="text" class="input-block-level" placeholder="Ваш E-mail" autofocus="" style="font-size: 24px;">
-<input name="names" type="text" class="input-block-level" placeholder="Ваше имя" autofocus="" style="font-size: 24px;">
-<input name="password1" type="password" class="input-block-level" placeholder="Пароль" autofocus="" style="font-size: 24px;">
-<input name="password2" type="password" class="input-block-level" placeholder="Повтор пароля" autofocus="" style="font-size: 24px;">
-<input type="hidden" name="act" value="register">
-<input type="hidden" name="ips" value="<?php echo $_SERVER['REMOTE_ADDR'];?>">
-<input type="hidden" name="vremya" value="<?php echo $vremya=date('d-m-Y');?>">
-<input id="regsubmit" type="submit" value="Регистрация" style="font-size: 23px;">
-</form>
-<a href="index.html" style="font-size: 23px;">Войти</a>
-
-<!-- Конец условия -->
-<?php endif; ?>
+ </head>
 
 
-</div></div>
 
-<script src="jquery-2.0.3.min.js"></script><script src="ajax-form.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body bgcolor="0f0559">
+
+
+
+
+<div class="title noIllustration">
+<span style="color: white; background: black;">Добро пожаловать в IT HUB</span> 
+        </div>
+        
+
+<style type="text/css">
+ .wsa_7s{display:inline-block;margin:40px;padding:10px 40px 11px;color:#fff;width:auto;height:auto;font-size:16px;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-decoration:none;text-shadow:0 -1px 1px rgba(0,0,0,0.50);-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;border-radius:3px;border:1px solid rgba(0,0,0,0.50);border-top:1px solid rgba(0,0,0,0.001);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.10);-moz-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.10);-o-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.10);-ms-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.10);box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.10);cursor:pointer;}
+ .wsa_7s:hover{-webkit-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.25);-moz-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.25);-o-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.25);-ms-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.25);box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.25);-webkit-animation:glow 1s infinite ease-in-out;cursor:pointer;}
+ .wsa_7s:active{padding:11px 40px 10px;border-top:1px solid rgba(0,0,0,0.55);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 2px 1px rgba(255,255,255,0.50), inset 0px 1px 4px rgba(0,0,0,0.35), inset 0px -14px 14px rgba(255,255,255,0.10);-moz-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 2px 1px rgba(255,255,255,0.50), inset 0px 1px 4px rgba(0,0,0,0.35), inset 0px -14px 14px rgba(255,255,255,0.10);-o-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 2px 1px rgba(255,255,255,0.50), inset 0px 1px 4px rgba(0,0,0,0.35), inset 0px -14px 14px rgba(255,255,255,0.10);-ms-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 2px 1px rgba(255,255,255,0.50), inset 0px 1px 4px rgba(0,0,0,0.35), inset 0px -14px 14px rgba(255,255,255,0.10);box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 2px 1px rgba(255,255,255,0.50), inset 0px 1px 4px rgba(0,0,0,0.35), inset 0px -14px 14px rgba(255,255,255,0.10);-webkit-animation:none;cursor:pointer !important;}
+ @-webkit-keyframes glow{0%{box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.35);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.35);-moz-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.35);-o-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.35);-ms-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.35);}100%{box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.18);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.18);-moz-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.18);-o-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.18);-ms-box-shadow:0 0 10px rgba(0,0,0,0.35), 0px 1px 3px rgba(0,0,0,0.18), inset 0px -3px 0px rgba(0,0,0,0.35), inset 0px 14px 14px rgba(255,255,255,0.18);}}
+ .rrr12{background-color:#4b4b4b;}
+</style>
+
+
+
+
+<a href="#" class="wsa_7s rrr12" style="font-size: 43px;line-height: 0.7;font-weight: 600;">Войти</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+ .avd_div{margin:30px auto;padding:0;text-align:center;display:block;}
+ .bucn_r{text-decoration:none;outline:none;display:inline-block;padding:14px 30px;margin:10px 20px;position:relative;color:#fff;font-size:20px;font-family:verdana;letter-spacing:1px;text-shadow:0 1px 1px #555;-webkit-box-shadow:0 0 4px #999;-moz-box-shadow:0 0 4px #999;-o-box-shadow:0 0 4px #999;box-shadow:0 0 4px #999;background-color:#d33636;background-image:linear-gradient(to top, #800000 0%, #d33636 100%);background-image:-o-linear-gradient(to top, #800000 0%, #d33636 100%);background-image:-moz-linear-gradient(to top, #800000 0%, #d33636 100%);background-image:-webkit-linear-gradient(to top, #800000 0%, #d33636 100%);background-image:-ms-linear-gradient(to top, #800000 0%, #d33636 100%);border:2px solid #800000;}
+ .bucn_r:before,.bucn_r:after{content:"";position:absolute;width:0;height:0;opacity:0;box-sizing:border-box;}
+ .bucn_r:before{bottom:0;left:0;transition:0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;border-left:2px solid #ff9494;border-top:2px solid #ff9494;}
+ .bucn_r:after{top:0;right:0;transition:0s ease opacity .4s, .2s ease width , .2s ease height .2s;border-right:2px solid #ff9494;border-bottom:2px solid #ff9494;}
+ .bucn_r:hover:before,.bucn_r:hover:after{height:100%;width:100%;opacity:1;}
+ .bucn_r:hover:before{transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;}
+ .bucn_r:hover:after{transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s;}
+ .bucn_r:hover{-webkit-box-shadow:0 0 4px #666;-moz-box-shadow:0 0 4px #666;-o-box-shadow:0 0 4px #666;box-shadow:0 0 4px #666;background-color:#800000;background-image:linear-gradient(to top, #d33636 0%, #800000 100%);background-image:-o-linear-gradient(to top, #d33636 0%, #800000 100%);background-image:-moz-linear-gradient(to top, #d33636 0%, #800000 100%);background-image:-webkit-linear-gradient(to top, #d33636 0%, #800000 100%);background-image:-ms-linear-gradient(to top, #d33636 0%, #800000 100%);}
+ *::before, *::after{box-sizing:border-box;}
+</style>
+
+<div class="avd_div"><a href="#" class="bucn_r">Сообщить о ошибке</a></div>
+
+
+
+
 </body>
-</htm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
